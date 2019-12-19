@@ -184,7 +184,7 @@ def parse_page(html):
 def main():
     page_count=get_page_count(get_html(BASE_URL))
     
-    for page in range(0,2):
+    for page in range(0,page_count):
         parse_catalogue(get_html(BASE_URL+"?page=%d" % page))
         
     write_json(genres_ids_dict,"genres")
